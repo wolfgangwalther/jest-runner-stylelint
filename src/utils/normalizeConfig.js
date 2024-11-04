@@ -4,4 +4,4 @@ const normalizeConfig = (config) => {
   });
 };
 
-module.exports = normalizeConfig;
+export default normalizeConfig;

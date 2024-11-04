@@ -1,3 +1,3 @@
-const StylelintWatchFixPlugin = require("./src/watchFixPlugin");
+import StylelintWatchFixPlugin from "./src/watchFixPlugin.js";
 
-module.exports = StylelintWatchFixPlugin;
+export default StylelintWatchFixPlugin;

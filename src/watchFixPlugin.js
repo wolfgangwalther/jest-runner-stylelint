@@ -1,8 +1,8 @@
 // eslint-disable-next-line jest/no-jest-import
-const { getVersion: getJestVersion } = require("jest");
-const configOverrides = require("./configOverrides");
+import { getVersion } from "jest";
+import configOverrides from "./configOverrides.js";
 
-const majorJestVersion = parseInt(getJestVersion().split(".")[0], 10);
+const majorJestVersion = parseInt(getVersion().split(".")[0], 10);
 
 /* istanbul ignore if */
 if (majorJestVersion < 23) {
@@ -44,4 +44,4 @@ class StylelintWatchFixPlugin {
   }
 }
 
-module.exports = StylelintWatchFixPlugin;
+export default StylelintWatchFixPlugin;

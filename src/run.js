@@ -1,8 +1,8 @@
-const { pass, fail } = require("create-jest-runner");
-const stylelint = require("stylelint");
-const getCliOptions = require("./utils/getCliOptions");
+import { pass, fail } from "create-jest-runner";
+import stylelint from "stylelint";
+import getCliOptions from "./utils/getCliOptions.js";
 
-module.exports = ({ testPath, config, extraOptions }) => {
+export default ({ testPath, config, extraOptions }) => {
   const start = new Date();
 
   const defaultConfig = {

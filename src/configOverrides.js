@@ -10,4 +10,4 @@ class ConfigOverrides {
 
 const configOverrides = new ConfigOverrides();
 
-module.exports = configOverrides;
+export default configOverrides;

@@ -1,5 +1,5 @@
-const { cosmiconfigSync } = require("cosmiconfig");
-const normalizeConfig = require("./normalizeConfig");
+import { cosmiconfigSync } from "cosmiconfig";
+import normalizeConfig from "./normalizeConfig.js";
 
 const explorerSync = cosmiconfigSync("jest-runner-stylelint");
 
@@ -10,4 +10,4 @@ const getCliOptions = ({ rootDir }) => {
   return normalizeConfig(config);
 };
 
-module.exports = getCliOptions;
+export default getCliOptions;

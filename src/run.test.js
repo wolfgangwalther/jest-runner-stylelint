@@ -1,5 +1,5 @@
-const path = require("path");
-const run = require("./run");
+import path from "path";
+import run from "./run";
 
 // Remove undeterministic data from test reports
 expect.addSnapshotSerializer({
@@ -19,7 +19,7 @@ describe("jest-runner-stylelint", () => {
   describe("failing fixture", () => {
     it("matches snapshot", () =>
       run({
-        testPath: path.join(__dirname, "__fixtures__", "bad.css"),
+        testPath: path.join(import.meta.dirname, "__fixtures__", "bad.css"),
         config: {},
         globalConfig: {},
         extraOptions: {},
@@ -29,7 +29,7 @@ describe("jest-runner-stylelint", () => {
   describe("passing fixture", () => {
     it("matches snapshot", () =>
       run({
-        testPath: path.join(__dirname, "__fixtures__", "good.css"),
+        testPath: path.join(import.meta.dirname, "__fixtures__", "good.css"),
         config: {},
         globalConfig: {},
         extraOptions: {},

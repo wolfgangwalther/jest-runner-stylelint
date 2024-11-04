@@ -1,6 +1,6 @@
-const { createJestRunner } = require("create-jest-runner");
-const configOverrides = require("./configOverrides");
+import { createJestRunner } from "create-jest-runner";
+import configOverrides from "./configOverrides.js";
 
-module.exports = createJestRunner(require.resolve("./run"), {
+export default createJestRunner(import.meta.resolve("./run.js"), {
   getExtraOptions: () => ({ fix: configOverrides.getFix() }),
 });

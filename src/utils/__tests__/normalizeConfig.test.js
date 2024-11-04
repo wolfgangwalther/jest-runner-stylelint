@@ -1,4 +1,4 @@
-const normalizeConfig = require("../normalizeConfig");
+import normalizeConfig from "../normalizeConfig";
 
 describe("normalizeConfig", () => {
   it("check cliOptions", () => {

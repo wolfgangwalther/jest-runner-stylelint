@@ -2,13 +2,17 @@
   "name": "jest-runner-stylelint",
   "version": "0.0.0-development",
   "description": "Stylelint runner for Jest",
-  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "src/index.js",
+    "src/run.js": "src/run.js"
+  },
   "repository": "https://github.com/keplersj/jest-runner-stylelint",
   "author": "Kepler Sticka-Jones <kepler@stickajones.org>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "husky": {
     "hooks": {
@@ -29,7 +33,8 @@
     "projects": [
       {
         "displayName": "test",
-        "collectCoverage": true
+        "collectCoverage": true,
+        "transform": {}
       },
       {
         "displayName": "lint:prettier",
@@ -78,6 +83,9 @@
     "extends": "starstuff/auto",
     "env": {
       "node": true
+    },
+    "rules": {
+      "unicorn/filename-case": "off"
     }
   }
 }
